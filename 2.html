@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Olaf Pietrus – Profil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #fff;
+      background: #181828;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Cztery wybuchowe tła */
+    .bg-img {
+      position: absolute;
+      width: 50vw;
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.6;
+      z-index: 1;
+      filter: blur(2px) brightness(0.8) saturate(1.3);
+      border-radius: 40px;
+      box-shadow: 0 0 120px 40px #ff0059, 0 0 80px 20px #00e6ff;
+      animation: explode 6s infinite alternate;
+    }
+    .bg1 { top: -5vh; left: -5vw; background-image: url('BrrBrr.webp'); animation-delay: 0s; }
+    .bg2 { top: -5vh; right: -5vw; background-image: url('bombardinio.webp'); animation-delay: 1s; }
+    .bg3 { bottom: -5vh; left: -5vw; background-image: url('tralla.webp'); animation-delay: 2s; }
+    .bg4 { bottom: -5vh; right: -5vw; background-image: url('Udin Din.webp'); animation-delay: 3s; }
+
+    @keyframes explode {
+      0% { transform: scale(1) rotate(0deg);}
+      100% { transform: scale(1.07) rotate(7deg);}
+    }
+
+    /* Centralny kontener */
+    .center-box {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(30, 30, 60, 0.85);
+      border-radius: 32px;
+      box-shadow: 0 6px 40px 0 #ff0059, 0 0 60px 0 #00e6ff;
+      padding: 48px 36px 36px 36px;
+      z-index: 10;
+      text-align: center;
+      width: 370px;
+      max-width: 90vw;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ff0059;
+      box-shadow: 0 0 40px 0 #00e6ff;
+      margin-bottom: 18px;
+      background: #fff;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: #ff0059;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 8px #181828, 0 0 12px #00e6ff;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #00e6ff;
+      margin-bottom: 22px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    .info-list {
+      text-align: left;
+      margin: 0 auto 18px auto;
+      max-width: 270px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .info-list li {
+      margin-bottom: 7px;
+      list-style: none;
+      position: relative;
+      padding-left: 20px;
+    }
+    .info-list li:before {
+      content: "•";
+      color: #ff0059;
+      position: absolute;
+      left: 0;
+      font-size: 1.2em;
+      top: 0;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .actions button {
+      background: linear-gradient(90deg, #ff0059 0%, #00e6ff 100%);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 26px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 12px #ff0059;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .actions button:hover {
+      transform: scale(1.07);
+      box-shadow: 0 4px 24px #00e6ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .center-box { padding: 24px 8px 18px 8px; }
+      .info-list { font-size: 0.98rem; }
+      h1 { font-size: 1.3rem; }
+      .avatar { width: 70px; height: 70px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Cztery tła -->
+  <div class="bg-img bg1"></div>
+  <div class="bg-img bg2"></div>
+  <div class="bg-img bg3"></div>
+  <div class="bg-img bg4"></div>
+
+  <!-- Centralny kontener -->
+  <div class="center-box">
+    <img src="21.jpg" alt="Olaf Pietrus" class="avatar">
+    <h1>Olaf Pietrus</h1>
+    <div class="subtitle">435 znajomych • 22 wspólnych znajomych</div>
+    <ul class="info-list">
+      <li>Mieszka w: Nowa Ruda</li>
+      <li>Z: Nowa Ruda</li>
+      <li>Status: Wolny(a)</li>
+      <li>Instagram: fr_olaf_pietrus</li>
+      <li>Alarmowo: alarmowonowaruda998</li>
+    </ul>
+    <div class="actions">
+      <button>Znajomi</button>
+      <button>Wyślij wiadomość</button>
+    </div>
+  </div>
+</body>
+</html>
